@@ -5,9 +5,103 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  width: 100vw;
+  background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin-top: 60px;
+  outline: 2px solid hsl(217, 16%, 45%);
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.score-div {
+  margin-top: 13px;
+  text-align: center;
+  background-color: hsl(0, 0%, 82%);
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  max-height: 90px;
+}
+
+.score {
+  margin-top: 14px;
+  color: hsl(229, 64%, 46%);
+}
+
+.score-number {
+  color:hsl(229, 25%, 31%);
+  font-size: 35px;
+  margin-top: -25px
+}
+
+main {
+  margin-top: 70px;
+  background-image: url('./bg-pentagon.svg');
+  background-size: contain;
+  background-repeat: no-repeat; /* pentagon 1,97 ratio */
+  width: 380px;
+}
+
+.play {
+  --border-color : black;
+  background-color: white;
+  border-radius: 50%;
+  padding: 20px;
+  border: 15px solid var(--border-color);
+  max-width: 50px;
+}
+
+.play-icon {
+  width: 50px;
+  height: 6vh;
+}
+
+.scissors {
+  position: relative;
+  top: -30px;
+  left: 130px
+}
+
+.spock {
+  position: relative;
+  top: -60px;
+  left: -40px;
+}
+
+.paper {
+  position: relative;
+  top: -190px;
+  left: 300px;
+}
+
+.lizard {
+  position: relative;
+  top: -120px;
+  left: 15px;
+}
+
+.rock {
+  position: relative;
+  top: -250px;
+  left: 245px;
+}
+
