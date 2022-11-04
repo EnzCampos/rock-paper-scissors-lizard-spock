@@ -2,12 +2,17 @@ import React from 'react'
 import Header from './assets/components/Header.js'
 import InPlay from './assets/components/Play.js'
 import Rules from './assets/components/Rules.js'
-
+import PlayedGame from './assets/components/PlayedGame'
 function App() {
 
   const [ score, setScore ] = React.useState(0)
   const [ showRules, setShowRules ] = React.useState(false)
   const [ playedOption, setPlayedOption ] = React.useState()
+
+  function changeScore() {
+    setScore(prevScore => (prevScore + 1))
+  }
+
 
   return (
     <div className="App">
@@ -16,18 +21,8 @@ function App() {
         <main>
           { !playedOption && 
           <InPlay onClickFunc={setPlayedOption}/> }
-          { playedOption && 
-          <div className='flex'>
-              <div className='player-pick white'>
-              You picked
-              <div className='play'>
-                <img src='' alt='Player Picked Option' className='play-icon'/>
-              </div>
-              </div>
-              <div className='house-pick white'>
-              The House Picked
-              </div>
-          </div>}
+          { playedOption &&  
+          <PlayedGame playedOption={playedOption} changeScore={changeScore}/>}
         </main>
       </section>
       <section>
