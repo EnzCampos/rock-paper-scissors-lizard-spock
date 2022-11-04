@@ -1,18 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from './assets/components/Header.js'
 import InPlay from './assets/components/Play.js'
 import Rules from './assets/components/Rules.js'
 import PlayedGame from './assets/components/PlayedGame'
 function App() {
 
-  const [ score, setScore ] = React.useState(0)
+  const [ score, setScore ] = React.useState(localStorage.getItem('score') ? localStorage.getItem('score') : 0)
   const [ showRules, setShowRules ] = React.useState(false)
   const [ playedOption, setPlayedOption ] = React.useState()
 
-  function changeScore() {
-    setScore(prevScore => (prevScore + 1))
-  }
+  useEffect(()=>{
+    localStorage.setItem('score', score)
+  },[score])
 
+  function changeScore(gameCondition) {
+
+    if (gameCondition === 'Win') {
+      setScore((prevScore) => (parseInt(prevScore) + 1))
+    }
+    if (gameCondition === 'Lose') {
+      setScore((prevScore) => (parseInt(prevScore) - 1))
+    }
+  }
 
   return (
     <div className="App">
@@ -22,7 +31,7 @@ function App() {
           { !playedOption && 
           <InPlay onClickFunc={setPlayedOption}/> }
           { playedOption &&  
-          <PlayedGame playedOption={playedOption} changeScore={changeScore}/>}
+          <PlayedGame playedOption={playedOption} changeScore={changeScore} changePlayedOption={setPlayedOption}/>}
         </main>
       </section>
       <section>
