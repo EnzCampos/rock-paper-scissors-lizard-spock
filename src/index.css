@@ -54,9 +54,9 @@ header {
   margin-top: -25px
 }
 
-main {
+.play-div {
   margin-top: 70px;
-  background-image: url('./bg-pentagon.svg');
+  background-image: url('./assets/images/bg-pentagon.svg');
   background-size: contain;
   background-repeat: no-repeat; /* pentagon 1,97 ratio */
   width: 380px;
@@ -90,7 +90,7 @@ main {
   --border-color: hsl(189, 59%, 53%);
 }
 
-.play-icon.spockImg {
+.play-icon.spock-svg {
   margin-left: 5px;
 }
 
@@ -130,6 +130,7 @@ main {
 .flex {
   display: flex;
   justify-content: space-between;
+  margin-top: 90px;
 }
 
 .rule-div {
@@ -148,4 +149,8 @@ main {
   width: 30px;
   height: 30px;
   margin-top: 20px;
+}
+
+.white {
+  color: hsl(0, 0%, 95%);
 }
