@@ -228,3 +228,10 @@ h3.pick-text {
 .game-finished {
   width: 50vw;
 }
+
+.win {
+  box-shadow: 
+    0 0 50px 2px hsl(225, 60%, 30%),
+    0 0 100px 35px hsl(225, 60%, 20%),
+    0 0 200px 5px hsl(225, 60%, 10%);
+}

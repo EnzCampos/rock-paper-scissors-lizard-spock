@@ -26,7 +26,7 @@ export default function GameIcon(props) {
     }
 
     return (
-        <div className={`play ${props.icon} ${props.bigIcon}`} onClick={()=>{props.onClickFunc(props.icon)}}>
+        <div className={`play ${props.icon} ${props.bigIcon} ${props.win}`} onClick={()=>{props.onClickFunc(props.icon)}}>
             <img src={imgSrc} alt={props.icon} className={`play-icon ${props.icon}-svg ${props.bigIcon}-svg`}/>
         </div>
     )

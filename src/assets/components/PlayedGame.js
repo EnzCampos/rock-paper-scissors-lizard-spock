@@ -64,7 +64,7 @@ export default function PlayedGame(props) {
         <div className={`flex playedGame ${gameStatus ? 'game-finished' : ''}`}>
             <div className='player-pick white'>
                 <h3 className="pick-text">YOU PICKED</h3>
-                <GameIcon icon={props.playedOption} bigIcon='big' onClickFunc={()=> {return}}/>
+                <GameIcon icon={props.playedOption} bigIcon='big' onClickFunc={()=> {return}} win={gameStatus === 'Win'? 'win': ''}/>
             </div>
             { gameStatus && 
             <div className="play-again">
@@ -75,7 +75,7 @@ export default function PlayedGame(props) {
             <div className='house-pick white'>
                 <h3 className="pick-text">THE HOUSE PICKED</h3>
                 { housePick ? 
-                <GameIcon icon={housePick} bigIcon='big' onClickFunc={()=> {return}}/> :
+                <GameIcon icon={housePick} bigIcon='big' onClickFunc={()=> {return}} win={ gameStatus === 'Lose'? 'win': ''}/> :
                 <div className="emptyIcon"></div>
                 }
             </div>
