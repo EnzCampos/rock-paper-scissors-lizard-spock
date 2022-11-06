@@ -17,7 +17,15 @@ code {
     monospace;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -223,6 +231,8 @@ h3.pick-text {
   border: 0px;
   border-radius: 10px;
   margin-top: -40px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .game-finished {
@@ -234,4 +244,275 @@ h3.pick-text {
     0 0 50px 2px hsl(225, 60%, 30%),
     0 0 100px 35px hsl(225, 60%, 20%),
     0 0 200px 5px hsl(225, 60%, 10%);
+}
+
+
+@media screen and (max-width: 850px) {
+  .big {
+    width: 120px;
+    height: 120px;
+  }
+
+  .emptyIcon {
+    width: 150px;
+    height: 150px;
+  }
+
+  .big-svg {
+    width: 70px;
+    height: 70px;
+    margin-left: -20px;
+    margin-top: -10px;
+  }
+
+  .big-svg.spock-svg {
+    position: relative;
+    left: 25px;
+  }
+
+  .game-finished-text {
+    font-size: 25px;
+  }
+  .playedGame {
+    width: 500px;
+  }
+  .rules {
+    left: 75vw;
+    top: 90vh;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  header {
+    margin-top: 15px;
+    margin-bottom: -20px;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .big {
+    width: 80px;
+    height: 80px;
+  }
+
+  .playedGame {
+    width: 450px;
+    margin-bottom: 150px;
+  }
+  .play {
+    border-width: 20px;
+  }
+  .big-svg {
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    margin-top: -25px;
+  }
+
+  .emptyIcon {
+    margin-top: 50px;
+  }
+
+  .big-svg.spock-svg {
+    position: relative;
+    left: 10px;
+  }
+
+  .game-finished-text {
+    font-size: 20px;
+  }
+  .play-again {
+    margin-top: 100px;
+  }
+
+  .play-again-btn {
+    padding: 0px;
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+
+  .pick-text {
+    font-size: 15px;
+  }
+  .play-div {
+    margin-bottom: -100px;
+  }
+  .rules {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .rules {
+    position: static;
+  }
+
+  .playedGame {
+    width: 100%;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 45px;
+    margin-top: 30px;
+  }
+
+  .play-again {
+    margin-top: 0px;
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+
+  .game-finished-text {
+    margin-top: 20px;
+    font-size: 45px;
+  }
+
+  .play-again-btn {
+    padding: 20px;
+    font-size: 15px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .play-div {
+    margin-bottom: -120px;
+  }
+
+  .playedGame {
+    margin-top: 50px;
+    margin-bottom: -30px;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  header {
+    border-radius: 5px;
+    width: 340px;
+  }
+
+  .score-div {
+    width: 30px;
+    height: 60px;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .score {
+    margin: 0px;
+    margin-left: -10px;
+    margin-top: 8px;
+  }
+  .score-number {
+    margin: 0px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+
+  .play-div {
+    margin-top: 80px;
+    width: 300px;
+    margin-bottom: 30px;
+  }
+
+  .play-icon {
+    width: 25px;
+    height: 3vh;
+  }
+
+  .play {
+    width: 20px;
+    height: 20px;
+    border-width: 10px;
+  }
+
+  .scissors {
+    top: -30px;
+    left: 120px;
+  }
+  
+  .spock {
+    top: -20px;
+    left: -30px;
+  }
+  .play-icon {
+    margin-left: -4px;
+    margin-top: -2px;
+  }
+
+  .play-icon.spock-svg {
+    margin-left: 0px;
+  }
+  
+  .paper {
+    top: -100px;
+    left: 250px;
+  }
+  
+  .lizard {
+    top: -10px;
+    left: 25px;
+  }
+  
+  .rock {
+    top: -90px;
+    left: 205px;
+  }
+
+  .big {
+    width: 80px;
+    height: 80px;
+    border-width: 15px;
+  }
+
+  .big-svg {
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    margin-top: -25px;
+  }
+
+  .emptyIcon {
+    margin-top: 45px;
+  }
+
+  .big-svg.spock-svg {
+    position: relative;
+    left: 10px;
+  }
+}
+/* 460 initial screen @media */
+
+@media screen and (max-width: 400px) {
+  header {
+    width: 280px;
+  }
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+  .score-div {
+    margin: 0px;
+    width: 80px;
+    padding: 0px;
+  }
+  .score {
+    margin: 0px;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .score-number {
+    font-size: 18px;
+  }
 }

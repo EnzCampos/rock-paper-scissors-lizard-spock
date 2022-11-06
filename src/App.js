@@ -3,6 +3,7 @@ import Header from './assets/components/Header.js'
 import InPlay from './assets/components/Play.js'
 import Rules from './assets/components/Rules.js'
 import PlayedGame from './assets/components/PlayedGame'
+
 function App() {
 
   const [ score, setScore ] = React.useState(localStorage.getItem('score') ? localStorage.getItem('score') : 0)
@@ -24,7 +25,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <main className="App">
       <section style={{ opacity: showRules ? "50%" : "100%" }} className='main-content'>
         <Header score={score}/>
         <main>
@@ -40,7 +41,7 @@ function App() {
         </div>
         { showRules && <Rules setShowRules={setShowRules}/> }
       </section>
-    </div>
+    </main>
   );
 }
 

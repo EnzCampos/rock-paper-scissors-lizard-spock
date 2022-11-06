@@ -4,7 +4,7 @@ import React from 'react'
 export default function Header(props) {
     return (
         <header>
-          <img src={logo} alt='Logo'/>
+          <img src={logo} alt='Logo' className='logo'/>
           <div className='score-div'>
             <h3 className='score'>Score</h3>
             <h2 className='score-number'>{props.score}</h2>
