@@ -35,12 +35,10 @@ function App() {
           <PlayedGame playedOption={playedOption} changeScore={changeScore} changePlayedOption={setPlayedOption}/>}
         </main>
       </section>
-      <section>
-        <div>
-          <button className='rules' onClick={()=>{setShowRules(true)}}>Rules</button>
-        </div>
-        { showRules && <Rules setShowRules={setShowRules}/> }
-      </section>
+      <div>
+        <button className='rules' onClick={()=>{setShowRules(true)}}>Rules</button>
+      </div>
+      { showRules && <Rules setShowRules={setShowRules}/> }
     </main>
   );
 }
