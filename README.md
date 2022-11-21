@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live](https://enzcampos.github.io/rock-paper-scissors-lizard-spock/)
 
 ## My process
 
